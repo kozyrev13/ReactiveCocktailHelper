@@ -1,0 +1,17 @@
+@(message: String,list: List[Cocktail])
+
+<div id="content" class="wrapper doc">
+    @message
+</div>
+<div id="content" class="wrapper doc">
+    <table>
+
+    @for(cocktail <- list) {
+        <tr>
+            <td>@cocktail.title </td>
+            <td> @cocktail.description</td>
+        </tr>
+
+    }
+    </table>
+</div>
