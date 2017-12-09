@@ -1,4 +1,4 @@
-@(message: String,list: List[Cocktail])
+@(message: String,list: List[Cocktail],list2: List[Cocktail])
 
 <div id="content" class="wrapper doc">
     @message
@@ -10,8 +10,14 @@
         <tr>
             <td>@cocktail.title </td>
             <td> @cocktail.description</td>
+            <td><a href="choose/@cocktail.id">Choose</a></td>
         </tr>
-
     }
+        @for(cocktail <- list2) {
+            <tr>
+                <td>@cocktail.title </td>
+                <td> @cocktail.description</td>
+            </tr>
+        }
     </table>
 </div>
